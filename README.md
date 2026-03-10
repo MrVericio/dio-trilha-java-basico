@@ -1,53 +1,72 @@
-# Controle de Fluxo em Java - Exemplo Simples de Condicional
+# Estruturas Condicionais em Java - Exemplos Simples e Compostas
 
-Este projeto faz parte do curso de Java da DIO (Digital Innovation One) e demonstra um exemplo básico de controle de fluxo utilizando estruturas condicionais simples.
+Este projeto faz parte do curso de Java da DIO (Digital Innovation One) e demonstra exemplos básicos de controle de fluxo utilizando estruturas condicionais simples e compostas.
 
-## Descrição do Código
+## Descrição dos Códigos
 
-O código implementado simula um cenário simples de um caixa eletrônico, onde verificamos se é possível realizar um saque com base no saldo disponível.
+### 1. CaixaEletronico.java - Estrutura Condicional Simples
 
-### Funcionalidades
+Este código simula um cenário simples de um caixa eletrônico, onde verificamos se é possível realizar um saque com base no saldo disponível. Utiliza uma estrutura condicional simples (`if`) sem um bloco `else`.
 
+#### Funcionalidades
 - **Verificação de Saldo**: O programa verifica se o valor do saque é menor que o saldo atual.
 - **Atualização de Saldo**: Se a condição for atendida, o saldo é atualizado subtraindo o valor do saque.
 - **Exibição do Resultado**: O saldo final é exibido no console.
 
-### Estrutura Condicional Utilizada
-
-O código utiliza uma estrutura `if` simples para controlar o fluxo:
-
+#### Estrutura Condicional Utilizada
 ```java
 if (valorSaque < saldo) {
     saldo = saldo - valorSaque;
 }
 ```
-
 - Se `valorSaque < saldo` for verdadeiro, o saque é realizado.
-- Caso contrário, o saldo permanece inalterado.
+- Caso contrário, o saldo permanece inalterado (não há ação alternativa definida).
+
+### 2. ResultadoEscola.java - Estrutura Condicional Composta
+
+Este código simula a avaliação de um resultado escolar baseado em uma nota. Utiliza uma estrutura condicional composta (`if-else`) para decidir entre duas possibilidades.
+
+#### Funcionalidades
+- **Avaliação da Nota**: O programa verifica se a nota é maior ou igual a 7.
+- **Exibição do Resultado**: Imprime "Aprovado" se a condição for verdadeira, ou "Reprovado" caso contrário.
+
+#### Estrutura Condicional Utilizada
+```java
+if (nota >= 7) {
+    System.out.println("Aprovado");
+} else {
+    System.out.println("Reprovado");
+}
+```
+- Se `nota >= 7` for verdadeiro, exibe "Aprovado".
+- Caso contrário, exibe "Reprovado".
 
 ## Como Executar
 
 1. Certifique-se de ter o Java JDK instalado (versão 17 ou superior recomendada).
-2. Compile o código:
-   ```
-   javac -d bin src/CaixaEletronico.java
-   ```
-3. Execute o programa:
-   ```
-   java -cp bin CaixaEletronico
-   ```
+
+2. **Para CaixaEletronico.java**:
+   - Compile: `javac -d bin src/CaixaEletronico.java`
+   - Execute: `java -cp bin CaixaEletronico`
+
+3. **Para ResultadoEscola.java**:
+   - Compile: `javac -d bin src/ResultadoEscola.java`
+   - Execute: `java -cp bin ResultadoEscola`
 
 ## Objetivo Educacional
 
-Este exemplo ilustra o conceito fundamental de controle de fluxo em programação, especificamente o uso de condicionais para tomar decisões baseadas em condições lógicas. É uma introdução prática para entender como o código pode se comportar de forma diferente dependendo dos valores das variáveis.
+Estes exemplos ilustram os conceitos fundamentais de controle de fluxo em programação:
+- **Estrutura Simples**: Uso de `if` para executar código apenas se uma condição for verdadeira.
+- **Estrutura Composta**: Uso de `if-else` para escolher entre duas ações baseadas em uma condição.
+
+É uma introdução prática para entender como o código pode se comportar de forma diferente dependendo dos valores das variáveis, promovendo a lógica de decisão em programas Java.
 
 ## Próximos Passos
 
-- Explore estruturas condicionais mais complexas, como `if-else` e `switch`.
-- Adicione validações adicionais, como verificar se o valor do saque é positivo.
-- Implemente loops para simular múltiplas operações.
-
-- Importação da classe `Scanner` para leitura de entrada
+- Explore estruturas condicionais aninhadas (`if` dentro de `if`).
+- Adicione validações adicionais, como verificar se os valores são positivos.
+- Implemente estruturas `switch` para múltiplas condições.
+- Combine condicionais com loops para cenários mais complexos.
 - Manipulação de variáveis de diferentes tipos (`String`, `double`)
 - Exibição formatada de mensagens com `System.out.println()`
 - Leitura correta de diferentes tipos de dados com Scanner
