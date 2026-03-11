@@ -29,12 +29,12 @@ if (valorSaque < saldo) {
 
 Este código simula a avaliação de um resultado escolar baseado em uma nota. Utiliza uma estrutura condicional composta (`if-else`) para decidir entre duas possibilidades.
 
-#### Funcionalidades
+#### Funcionalidades:
 
 - **Avaliação da Nota**: O programa verifica se a nota é maior ou igual a 7.
 - **Exibição do Resultado**: Imprime "Aprovado" se a condição for verdadeira, ou "Reprovado" caso contrário.
 
-#### Estrutura Condicional Utilizada
+#### Estrutura Condicional Utilizada:
 
 ```java
 if (nota >= 7) {
