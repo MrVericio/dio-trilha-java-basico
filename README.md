@@ -9,16 +9,19 @@ Este projeto faz parte do curso de Java da DIO (Digital Innovation One) e demons
 Este código simula um cenário simples de um caixa eletrônico, onde verificamos se é possível realizar um saque com base no saldo disponível. Utiliza uma estrutura condicional simples (`if`) sem um bloco `else`.
 
 #### Funcionalidades
+
 - **Verificação de Saldo**: O programa verifica se o valor do saque é menor que o saldo atual.
 - **Atualização de Saldo**: Se a condição for atendida, o saldo é atualizado subtraindo o valor do saque.
 - **Exibição do Resultado**: O saldo final é exibido no console.
 
 #### Estrutura Condicional Utilizada
+
 ```java
 if (valorSaque < saldo) {
     saldo = saldo - valorSaque;
 }
 ```
+
 - Se `valorSaque < saldo` for verdadeiro, o saque é realizado.
 - Caso contrário, o saldo permanece inalterado (não há ação alternativa definida).
 
@@ -27,10 +30,12 @@ if (valorSaque < saldo) {
 Este código simula a avaliação de um resultado escolar baseado em uma nota. Utiliza uma estrutura condicional composta (`if-else`) para decidir entre duas possibilidades.
 
 #### Funcionalidades
+
 - **Avaliação da Nota**: O programa verifica se a nota é maior ou igual a 7.
 - **Exibição do Resultado**: Imprime "Aprovado" se a condição for verdadeira, ou "Reprovado" caso contrário.
 
 #### Estrutura Condicional Utilizada
+
 ```java
 if (nota >= 7) {
     System.out.println("Aprovado");
@@ -38,6 +43,7 @@ if (nota >= 7) {
     System.out.println("Reprovado");
 }
 ```
+
 - Se `nota >= 7` for verdadeiro, exibe "Aprovado".
 - Caso contrário, exibe "Reprovado".
 
@@ -56,6 +62,7 @@ if (nota >= 7) {
 ## Objetivo Educacional
 
 Estes exemplos ilustram os conceitos fundamentais de controle de fluxo em programação:
+
 - **Estrutura Simples**: Uso de `if` para executar código apenas se uma condição for verdadeira.
 - **Estrutura Composta**: Uso de `if-else` para escolher entre duas ações baseadas em uma condição.
 
