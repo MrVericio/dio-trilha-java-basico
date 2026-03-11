@@ -68,36 +68,7 @@ Estes exemplos ilustram os conceitos fundamentais de controle de fluxo em progra
 
 É uma introdução prática para entender como o código pode se comportar de forma diferente dependendo dos valores das variáveis, promovendo a lógica de decisão em programas Java.
 
-## Próximos Passos
-
-- Explore estruturas condicionais aninhadas (`if` dentro de `if`).
-- Adicione validações adicionais, como verificar se os valores são positivos.
-- Implemente estruturas `switch` para múltiplas condições.
-- Combine condicionais com loops para cenários mais complexos.
-- Manipulação de variáveis de diferentes tipos (`String`, `double`)
-- Exibição formatada de mensagens com `System.out.println()`
-- Leitura correta de diferentes tipos de dados com Scanner
-
-## 💡 Exemplo de Execução
-
-```
-Digite o número da conta:
-1234
-Número da conta: 1234
-
-Digite o número da agência:
-0001
-Número da agência: 0001
-
-Digite o nome do cliente:
-João Silva
-Nome do cliente: João
-
-Saldo da conta: 523.02
-Olá João, obrigado por criar uma conta em nosso banco, sua agência é 0001, conta 1234 e seu saldo 523.02 já está disponível para saque.
-```
-
-## 🛠️ Tecnologias
+## ️ Tecnologias
 
 - Java SE 17
 - Scanner (java.util)
