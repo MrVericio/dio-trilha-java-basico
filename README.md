@@ -118,6 +118,127 @@ String resultado = (nota >= 7) ? "Aprovado"
 - Condição principal testa aprovação; caso seja falsa, uma segunda condição decide entre recuperação ou reprovação.
 - Tudo acontece em uma linha, mostrando como expressões podem substituir blocos `if`.
 
+## 5. PlanoOperadoraIf.java - Estrutura Condicional Encadeada com if-else
+
+Este código simula a seleção de planos de operadora de celular, demonstrando como usar uma cadeia de `if-else if-else` para escolher entre diferentes opções de plano.
+
+### Funcionalidades
+
+- **Seleção de Plano**: O programa verifica o plano escolhido ("B", "M" ou "T") e exibe os benefícios correspondentes.
+- **Benefícios Acumulativos**: Cada plano superior inclui os benefícios do plano anterior.
+- **Tratamento de Erro**: Caso o plano seja inválido, exibe uma mensagem de erro.
+
+### Estrutura Condicional Utilizada
+
+```java
+if (plano.equals("B")) {
+    System.out.println("100 minutos de ligação");
+} else if (plano.equals("M")) {
+    System.out.println("100 minutos de ligação");
+    System.out.println("Whats e Instagram ilimitados");
+} else if (plano.equals("T")) {
+    System.out.println("100 minutos de ligação");
+    System.out.println("Whats e Instagram ilimitados");
+    System.out.println("5GB Youtube");
+} else {
+    System.out.println("Plano inválido");
+}
+```
+
+- Primeiro verifica se é plano "B" (básico).
+- Se não, verifica "M" (médio), que inclui benefícios do "B".
+- Se não, verifica "T" (top), que inclui benefícios dos anteriores.
+- Caso nenhum seja válido, exibe mensagem de erro.
+
+## 6. PlanoOperadoraSwitch.java - Estrutura Switch com Fall-through
+
+Este exemplo demonstra o uso da estrutura `switch` sem declarações `break`, resultando em comportamento de "fall-through" onde múltiplos casos são executados sequencialmente.
+
+### Funcionalidades
+
+- **Seleção de Plano**: Utiliza switch para avaliar o plano escolhido.
+- **Fall-through Intencional**: Sem `break`, quando um caso é verdadeiro, os subsequentes também são executados.
+- **Benefícios Acumulativos**: Demonstra como o fall-through pode ser usado para acumular benefícios.
+
+### Estrutura Condicional Utilizada
+
+```java
+switch (plano) {
+    case "T": {
+        System.out.println("5GB Youtube");
+    }
+    case "M": {
+        System.out.println("Whats e Instagram ilimitados");
+    }
+    case "B": {
+        System.out.println("100 minutos de ligação");
+    }
+}
+```
+
+- Quando plano é "T", executa todos os casos (T, M, B).
+- Quando plano é "M", executa M e B.
+- Quando plano é "B", executa apenas B.
+- Demonstra comportamento de fall-through para acumular benefícios.
+
+## 7. SistemaMedida.java - Estrutura Condicional Encadeada Simples
+
+Este código converte siglas de tamanhos ("P", "M", "G") para suas descrições completas em português, utilizando uma cadeia de `if-else if-else`.
+
+### Funcionalidades
+
+- **Conversão de Siglas**: Transforma abreviações em palavras completas.
+- **Mapeamento Direto**: Cada sigla corresponde a uma única descrição.
+- **Caso Padrão**: Trata siglas inválidas com "INDEFINIDO".
+
+### Estrutura Condicional Utilizada
+
+```java
+if (sigla.equals("P")) {
+    System.out.println("PEQUENO");
+} else if (sigla.equals("M")) {
+    System.out.println("MEDIO");
+} else if (sigla.equals("G")) {
+    System.out.println("GRANDE");
+} else {
+    System.out.println("INDEFINIDO");
+}
+```
+
+- Testa cada sigla sequencialmente.
+- Exibe a descrição correspondente ou "INDEFINIDO" se inválida.
+
+## 8. SistemaMedidaSwitch.java - Estrutura Switch com Break
+
+Este exemplo mostra a implementação correta de uma estrutura `switch` com declarações `break`, evitando o fall-through e garantindo que apenas o caso correspondente seja executado.
+
+### Funcionalidades
+
+- **Conversão de Siglas**: Mesma funcionalidade do SistemaMedida.java.
+- **Execução Exclusiva**: Cada caso é executado independentemente.
+- **Boa Prática**: Demonstra o uso adequado de `break` e `default`.
+
+### Estrutura Condicional Utilizada
+
+```java
+switch (sigla) {
+    case "P":
+        System.out.println("PEQUENO");
+        break;
+    case "M":
+        System.out.println("MEDIO");
+        break;
+    case "G":
+        System.out.println("GRANDE");
+        break;
+    default:
+        System.out.println("INDEFINIDO");
+}
+```
+
+- Cada caso termina com `break`, executando apenas o correspondente.
+- Caso `default` trata valores não previstos.
+
 ## Como Executar
 
 1. Certifique-se de ter o Java JDK instalado (versão 17 ou superior recomendada).
@@ -129,18 +250,28 @@ String resultado = (nota >= 7) ? "Aprovado"
    java -cp bin NomeDoArquivo
    ```
 
-   Onde `NomeDoArquivo` pode ser `CaixaEletronico`, `ResultadoEscola`, `ResultadoEscolaEncadeado` ou `ResultadoEscolaTernaria`.
+   Onde `NomeDoArquivo` pode ser:
+   - `CaixaEletronico`
+   - `ResultadoEscola`
+   - `ResultadoEscolaEncadeado`
+   - `ResultadoEscolaTernaria`
+   - `PlanoOperadoraIf`
+   - `PlanoOperadoraSwitch`
+   - `SistemaMedida`
+   - `SistemaMedidaSwitch`
 
 ## Objetivo Educacional
 
-Estes exemplos abrangem as quatro formas básicas de controle condicional em Java:
+Estes exemplos abrangem as principais formas de controle condicional em Java:
 
 - **Condicional simples (`if`)**
 - **Condicional composta (`if-else`)**
 - **Condicional encadeada (`if-else if-else`)**
 - **Operador ternário para expressões concisas**
+- **Estrutura `switch` com fall-through**
+- **Estrutura `switch` com `break` (boas práticas)**
 
-São blocos fundamentais para construir lógica de decisão em programas Java.
+São blocos fundamentais para construir lógica de decisão em programas Java, incluindo comparações entre `if-else` e `switch` para diferentes cenários.
 
 ## Próximos Passos
 
